@@ -33,7 +33,8 @@ namespace ThePhotoShop5.Models
         public DbSet<Client> Clients { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
 
-
+        
     }
 }

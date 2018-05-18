@@ -9,12 +9,14 @@ namespace ThePhotoShop5.Models
 {
     public class Invoice
     {
+        private Client _client;
+
         [Key]
         public int InvoiceId { get; set; }
 
         [ForeignKey("Client")]
         public int ClientId { get; set; }
-        public Client Client{get;set;}
+        public Client Client { get; set; }
 
         [ForeignKey("Reservation")]
         public int ReservationId { get; set; }

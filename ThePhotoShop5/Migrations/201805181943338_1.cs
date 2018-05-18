@@ -14,7 +14,7 @@ namespace ThePhotoShop5.Migrations
                         ClientId = c.Int(nullable: false, identity: true),
                         FirstName = c.String(),
                         LastName = c.String(),
-                        Phone = c.Double(nullable: false),
+                        Phone = c.String(),
                         User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.ClientId)
@@ -80,6 +80,51 @@ namespace ThePhotoShop5.Migrations
                 .Index(t => t.RoleId);
             
             CreateTable(
+                "dbo.Invoices",
+                c => new
+                    {
+                        InvoiceId = c.Int(nullable: false, identity: true),
+                        ClientId = c.Int(nullable: false),
+                        ReservationId = c.Int(nullable: false),
+                        AmountDue = c.Double(nullable: false),
+                        InvoicePaid = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.InvoiceId)
+                .ForeignKey("dbo.Clients", t => t.ClientId, cascadeDelete: true)
+                .ForeignKey("dbo.Reservations", t => t.ReservationId, cascadeDelete: true)
+                .Index(t => t.ClientId)
+                .Index(t => t.ReservationId);
+            
+            CreateTable(
+                "dbo.Reservations",
+                c => new
+                    {
+                        ReservationId = c.Int(nullable: false, identity: true),
+                        ClientId = c.Int(nullable: false),
+                        LocationId = c.Int(nullable: false),
+                        AppointmentDateTime = c.String(),
+                        AppointmentConfirmation = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.ReservationId)
+                .ForeignKey("dbo.Clients", t => t.ClientId, cascadeDelete: false)
+                .ForeignKey("dbo.Locations", t => t.LocationId, cascadeDelete: true)
+                .Index(t => t.ClientId)
+                .Index(t => t.LocationId);
+            
+            CreateTable(
+                "dbo.Locations",
+                c => new
+                    {
+                        LocationId = c.Int(nullable: false, identity: true),
+                        NameOfLocation = c.String(),
+                        StreetAddress = c.String(),
+                        City = c.String(),
+                        State = c.String(),
+                        Zip = c.String(),
+                    })
+                .PrimaryKey(t => t.LocationId);
+            
+            CreateTable(
                 "dbo.Owners",
                 c => new
                     {
@@ -106,12 +151,20 @@ namespace ThePhotoShop5.Migrations
         {
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.Owners", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.Invoices", "ReservationId", "dbo.Reservations");
+            DropForeignKey("dbo.Reservations", "LocationId", "dbo.Locations");
+            DropForeignKey("dbo.Reservations", "ClientId", "dbo.Clients");
+            DropForeignKey("dbo.Invoices", "ClientId", "dbo.Clients");
             DropForeignKey("dbo.Clients", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.Owners", new[] { "UserId" });
+            DropIndex("dbo.Reservations", new[] { "LocationId" });
+            DropIndex("dbo.Reservations", new[] { "ClientId" });
+            DropIndex("dbo.Invoices", new[] { "ReservationId" });
+            DropIndex("dbo.Invoices", new[] { "ClientId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
@@ -120,6 +173,9 @@ namespace ThePhotoShop5.Migrations
             DropIndex("dbo.Clients", new[] { "User_Id" });
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Owners");
+            DropTable("dbo.Locations");
+            DropTable("dbo.Reservations");
+            DropTable("dbo.Invoices");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
