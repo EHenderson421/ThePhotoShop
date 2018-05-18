@@ -9,7 +9,7 @@ namespace ThePhotoShop5.Models
     public class Location
     {
         [Key]
-        public string LocationId { get; set; }
+        public int LocationId { get; set; }
         public string NameOfLocation { get; set; }
         public string StreetAddress { get; set; }
         public string City { get; set; }

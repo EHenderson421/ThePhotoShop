@@ -10,9 +10,13 @@ namespace ThePhotoShop5.Models
     {
         [Key]
         public int ClientId { get; set; }
+
         public string FirstName { get; set; }
+
         public string LastName { get; set; }
+
         public string Phone { get; set; }
+
         public ApplicationUser User { get; set; }
 
     }
