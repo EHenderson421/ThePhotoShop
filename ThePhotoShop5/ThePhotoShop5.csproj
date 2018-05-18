@@ -211,10 +211,19 @@
     <Compile Include="Migrations\201805181512227_2.Designer.cs">
       <DependentUpon>201805181512227_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805181823130_3.cs" />
+    <Compile Include="Migrations\201805181823130_3.Designer.cs">
+      <DependentUpon>201805181823130_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805181843034_4.cs" />
+    <Compile Include="Migrations\201805181843034_4.Designer.cs">
+      <DependentUpon>201805181843034_4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Owner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -313,6 +322,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805181512227_2.resx">
       <DependentUpon>201805181512227_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805181823130_3.resx">
+      <DependentUpon>201805181823130_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805181843034_4.resx">
+      <DependentUpon>201805181843034_4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

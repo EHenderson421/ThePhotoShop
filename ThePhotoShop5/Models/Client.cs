@@ -12,7 +12,7 @@ namespace ThePhotoShop5.Models
         public int ClientId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public double Phone { get; set; }
+        public string Phone { get; set; }
         public ApplicationUser User { get; set; }
 
     }
