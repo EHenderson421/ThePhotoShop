@@ -30,5 +30,6 @@ namespace ThePhotoShop5.Models
             return new ApplicationDbContext();
         }
         public DbSet<Owner> Owners { get; set; }
+        public DbSet<Client> Clients { get; set; }
     }
 }

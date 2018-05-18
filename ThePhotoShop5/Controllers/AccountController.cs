@@ -17,9 +17,11 @@ namespace ThePhotoShop5.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        //private ApplicationDbContext context; // Eric Added
 
         public AccountController()
         {
+            //context = new ApplicationDbContext(); // Eric added
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -163,7 +165,7 @@ namespace ThePhotoShop5.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Create", "Clients");
                 }
                 AddErrors(result);
             }
