@@ -9,8 +9,6 @@ namespace ThePhotoShop5.Models
 {
     public class Invoice
     {
-        private Client _client;
-
         [Key]
         public int InvoiceId { get; set; }
 
@@ -22,7 +20,9 @@ namespace ThePhotoShop5.Models
         public int ReservationId { get; set; }
         public Reservation Reservation { get; set; }
 
+        [Display(Name = "Amount Due")]
         public double AmountDue { get; set; }
+        [Display(Name = "Paid In Full")]
         public bool InvoicePaid { get; set; }
     }
 }

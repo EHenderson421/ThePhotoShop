@@ -20,8 +20,10 @@ namespace ThePhotoShop5.Models
         public int LocationId { get; set; }
         public Location Location { get; set; }
 
+        [Display(Name = "Appointment Date and Time")]
         public string AppointmentDateTime { get; set; }
 
+        [Display(Name = "Appointment Confirmed")]
         public bool AppointmentConfirmation { get; set; }
 
 
