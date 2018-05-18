@@ -10,7 +10,7 @@ namespace ThePhotoShop5.Models
     public class Reservation
     {
         [Key]
-        public string ReservationId { get; set; }
+        public int ReservationId { get; set; }
 
         [ForeignKey("Client")]
         public int ClientId { get; set; }
