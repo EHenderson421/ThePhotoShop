@@ -1,0 +1,50 @@
+﻿@model ThePhotoShop5.Models.Invoice
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Invoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.AppointmentDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.AppointmentDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountDue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmountDue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoicePaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoicePaid)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InvoiceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
