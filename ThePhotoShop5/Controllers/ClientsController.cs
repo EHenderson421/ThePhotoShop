@@ -18,8 +18,12 @@ namespace ThePhotoShop5.Controllers
         public ActionResult Index()
         {
             return View(db.Clients.ToList());
+            
         }
-
+        public ActionResult Home()
+        {
+            return View();
+        }
         // GET: Clients/Details/5
         public ActionResult Details(int? id)
         {
@@ -51,8 +55,9 @@ namespace ThePhotoShop5.Controllers
             if (ModelState.IsValid)
             {
                 db.Clients.Add(client);
+                
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Home");
             }
 
             return View(client);

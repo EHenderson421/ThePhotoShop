@@ -90,7 +90,7 @@ namespace ThePhotoShop5.Migrations
                         InvoicePaid = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.InvoiceId)
-                .ForeignKey("dbo.Clients", t => t.ClientId, cascadeDelete: true)
+                .ForeignKey("dbo.Clients", t => t.ClientId, cascadeDelete: false)
                 .ForeignKey("dbo.Reservations", t => t.ReservationId, cascadeDelete: true)
                 .Index(t => t.ClientId)
                 .Index(t => t.ReservationId);
@@ -106,7 +106,7 @@ namespace ThePhotoShop5.Migrations
                         AppointmentConfirmation = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.ReservationId)
-                .ForeignKey("dbo.Clients", t => t.ClientId, cascadeDelete: false)
+                .ForeignKey("dbo.Clients", t => t.ClientId, cascadeDelete: true)
                 .ForeignKey("dbo.Locations", t => t.LocationId, cascadeDelete: true)
                 .Index(t => t.ClientId)
                 .Index(t => t.LocationId);
@@ -141,6 +141,7 @@ namespace ThePhotoShop5.Migrations
                     {
                         Id = c.String(nullable: false, maxLength: 128),
                         Name = c.String(nullable: false, maxLength: 256),
+                        Discriminator = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.Name, unique: true, name: "RoleNameIndex");
