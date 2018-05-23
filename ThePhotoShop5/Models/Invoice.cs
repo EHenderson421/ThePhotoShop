@@ -21,7 +21,7 @@ namespace ThePhotoShop5.Models
         public Reservation Reservation { get; set; }
 
         [Display(Name = "Amount Due")]
-        public double AmountDue { get; set; }
+        public float AmountDue { get; set; }
         [Display(Name = "Paid In Full")]
         public bool InvoicePaid { get; set; }
     }

@@ -22,7 +22,7 @@ namespace ThePhotoShop5.Controllers
         }
 
         // GET: Reservations/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -49,7 +49,7 @@ namespace ThePhotoShop5.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ReservationId,ClientId,LocationId,AppointmentDateTime,AppointmentConfirmation")] Reservation reservation)
+        public ActionResult Create([Bind(Include = "ReservationId,ClientId,LocationId,AppointmentDate,AppointmentTime,AppointmentConfirmation")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,7 @@ namespace ThePhotoShop5.Controllers
         }
 
         // GET: Reservations/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -85,7 +85,7 @@ namespace ThePhotoShop5.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ReservationId,ClientId,LocationId,AppointmentDateTime,AppointmentConfirmation")] Reservation reservation)
+        public ActionResult Edit([Bind(Include = "ReservationId,ClientId,LocationId,AppointmentDate,AppointmentTime,AppointmentConfirmation")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +99,7 @@ namespace ThePhotoShop5.Controllers
         }
 
         // GET: Reservations/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -116,7 +116,7 @@ namespace ThePhotoShop5.Controllers
         // POST: Reservations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             Reservation reservation = db.Reservations.Find(id);
             db.Reservations.Remove(reservation);

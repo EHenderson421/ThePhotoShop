@@ -18,7 +18,10 @@
             @Html.DisplayNameFor(model => model.Location.NameOfLocation)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AppointmentDateTime)
+            @Html.DisplayNameFor(model => model.AppointmentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppointmentTime)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AppointmentConfirmation)
@@ -35,7 +38,10 @@
             @Html.DisplayFor(modelItem => item.Location.NameOfLocation)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AppointmentDateTime)
+            @Html.DisplayFor(modelItem => item.AppointmentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AppointmentTime)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AppointmentConfirmation)

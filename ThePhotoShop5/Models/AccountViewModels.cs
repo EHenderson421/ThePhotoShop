@@ -79,8 +79,12 @@ namespace ThePhotoShop5.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-        public string RoleName { get; set; }
+        
+        //pick the one you need
+        public string RoleName = "Client";
+        //public string RoleName = "Owner";
     }
+
 
     public class ResetPasswordViewModel
     {
