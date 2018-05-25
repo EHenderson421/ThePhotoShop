@@ -12,10 +12,13 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.Client.FirstName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Client.LastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Reservation.AppointmentDateTime)
+            @Html.DisplayNameFor(model => model.Reservation.AppointmentDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AmountDue)
@@ -32,7 +35,10 @@
             @Html.DisplayFor(modelItem => item.Client.FirstName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Reservation.AppointmentDateTime)
+            @Html.DisplayFor(modelItem => item.Client.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reservation.AppointmentDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AmountDue)
@@ -41,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.InvoicePaid)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.InvoiceId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.InvoiceId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.InvoiceId })
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.InvoiceId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.InvoiceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.InvoiceId })*@
         </td>
     </tr>
 }

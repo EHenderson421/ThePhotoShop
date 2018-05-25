@@ -40,7 +40,7 @@ namespace ThePhotoShop5.Controllers
         public ActionResult Create()
         {
             ViewBag.ClientId = new SelectList(db.Clients, "ClientId", "FirstName");
-            ViewBag.ReservationId = new SelectList(db.Reservations, "ReservationId", "AppointmentDateTime");
+            ViewBag.ReservationId = new SelectList(db.Reservations, "ReservationId", "AppointmentDate");
             return View();
         }
 
@@ -59,7 +59,7 @@ namespace ThePhotoShop5.Controllers
             }
 
             ViewBag.ClientId = new SelectList(db.Clients, "ClientId", "FirstName", invoice.ClientId);
-            ViewBag.ReservationId = new SelectList(db.Reservations, "ReservationId", "AppointmentDateTime", invoice.ReservationId);
+            ViewBag.ReservationId = new SelectList(db.Reservations, "ReservationId", "AppointmentDate", invoice.ReservationId);
             return View(invoice);
         }
 
@@ -76,7 +76,7 @@ namespace ThePhotoShop5.Controllers
                 return HttpNotFound();
             }
             ViewBag.ClientId = new SelectList(db.Clients, "ClientId", "FirstName", invoice.ClientId);
-            ViewBag.ReservationId = new SelectList(db.Reservations, "ReservationId", "AppointmentDateTime", invoice.ReservationId);
+            ViewBag.ReservationId = new SelectList(db.Reservations, "ReservationId", "AppointmentDate", invoice.ReservationId);
             return View(invoice);
         }
 
@@ -94,7 +94,7 @@ namespace ThePhotoShop5.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.ClientId = new SelectList(db.Clients, "ClientId", "FirstName", invoice.ClientId);
-            ViewBag.ReservationId = new SelectList(db.Reservations, "ReservationId", "AppointmentDateTime", invoice.ReservationId);
+            ViewBag.ReservationId = new SelectList(db.Reservations, "ReservationId", "AppointmentDate", invoice.ReservationId);
             return View(invoice);
         }
 

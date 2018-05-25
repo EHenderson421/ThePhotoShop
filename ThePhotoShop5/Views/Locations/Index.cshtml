@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<ThePhotoShop5.Models.Location>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Suggested Locations";
 }
 
-<h2>Index</h2>
+<h2>Locations</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "btn btn-default" })
 </p>
 <table class="table">
     <tr>
@@ -46,11 +46,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.Zip)
         </td>
-        <td>
+        @*<td>
             @Html.ActionLink("Edit", "Edit", new { id=item.LocationId }) |
             @Html.ActionLink("Details", "Details", new { id=item.LocationId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.LocationId })
-        </td>
+        </td>*@
     </tr>
 }
 

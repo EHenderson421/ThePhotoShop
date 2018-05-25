@@ -53,6 +53,9 @@ namespace ThePhotoShop5.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Client client = db.Clients.Find();
+                
+                //Location location = db.Locations.Find();
                 db.Reservations.Add(reservation);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -69,11 +72,13 @@ namespace ThePhotoShop5.Controllers
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                //RedirectToAction("Create"); //Eric Added
             }
             Reservation reservation = db.Reservations.Find(id);
             if (reservation == null)
             {
                 return HttpNotFound();
+                //RedirectToAction("Create"); //Eric Added
             }
             ViewBag.ClientId = new SelectList(db.Clients, "ClientId", "FirstName", reservation.ClientId);
             ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "NameOfLocation", reservation.LocationId);

@@ -15,16 +15,16 @@
         @using (Html.BeginForm("Index", "Emails", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             <center>
-                <h1>Email</h1>
+                <h1>S/H Photography Email</h1>
                 <hr />
                 <table>
                     <tr>
-                        <td style="width: 100px">
+                        @*<td style="width: 100px">
                             To:
                         </td>
                         <td>@Html.TextBoxFor(model => model.To)</td>
                     </tr>
-                    <tr>
+                    <tr>*@
                         <td>
                             From:
                         </td>
@@ -40,7 +40,7 @@
                         <td valign="top">
                             Body:
                         </td>
-                        <td>@Html.TextAreaFor(model => model.Body, new { rows = "15", cols = "100" })</td>
+                        <td>@Html.TextAreaFor(model => model.Body, new { rows = "15", cols = "500" })</td>
                     </tr>
                     <tr>
                         <td>

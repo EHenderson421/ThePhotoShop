@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stripe;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace ThePhotoShop5.Controllers
 {
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
             return View();
@@ -30,7 +32,6 @@ namespace ThePhotoShop5.Controllers
         public ActionResult Home()
         {
             bool role = User.IsInRole("Owner");
-            //bool role = User.IsInRole("Owners");
             if (role)
             {
                 return RedirectToAction("Home", "Owners");

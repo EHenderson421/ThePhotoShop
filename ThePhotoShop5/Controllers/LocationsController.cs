@@ -52,7 +52,7 @@ namespace ThePhotoShop5.Controllers
             {
                 db.Locations.Add(location);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Create", "Reservations" );
             }
 
             return View(location);

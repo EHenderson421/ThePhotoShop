@@ -20,7 +20,7 @@ namespace ThePhotoShop5.Controllers
         [HttpPost]
         public ActionResult Index(Email model)
         {
-            MailMessage mm = new MailMessage(model.From, model.To);
+            MailMessage mm = new MailMessage(model.From, "TheBetterScheduler@gmail.com");
             // mm.From = model.From;
             mm.Subject = model.Subject;
             mm.Body = "Message sent by - " + model.From + ",  Message - " + model.Body;

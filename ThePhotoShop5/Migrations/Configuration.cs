@@ -4,6 +4,7 @@ namespace ThePhotoShop5.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using ThePhotoShop5.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ThePhotoShop5.Models.ApplicationDbContext>
     {
@@ -14,10 +15,24 @@ namespace ThePhotoShop5.Migrations
 
         protected override void Seed(ThePhotoShop5.Models.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            if (context.Owners.Any())
+            {
+                return;
+            }
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            else
+            {
+
+                var owner = new Owner[]
+                {
+                new Owner{UserId = "eric@thephotoshop.com"}
+                };
+                foreach (Owner o in owner)
+                {
+                    context.Owners.Add(o);
+                }
+                context.SaveChanges();
+            }
         }
     }
 }

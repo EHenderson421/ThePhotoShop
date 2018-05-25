@@ -15,16 +15,17 @@
     </li>
     @if (User.IsInRole("Owner"))
     {
+        <li>@Html.ActionLink("Reservations", "Index", "Reservations")</li>
         <li>@Html.ActionLink("Client List", "Index", "Clients")</li>
         <li>@Html.ActionLink("Create Invoices", "Create", "Invoices")</li>
     }
     @if (User.IsInRole("Client"))
     {
         <li>@Html.ActionLink("Home", "Home", "Clients")</li>
+        <li>@Html.ActionLink("View Invoices", "Index", "Invoices")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Index", "Emails")</li>
     }
-    <li>@Html.ActionLink("About", "About", "Home")</li>
-    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-
 
 
 
@@ -38,7 +39,7 @@ else
 {
     <ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Index", "Emails")</li>
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
