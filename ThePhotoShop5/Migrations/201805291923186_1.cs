@@ -86,7 +86,7 @@ namespace ThePhotoShop5.Migrations
                         InvoiceId = c.Int(nullable: false, identity: true),
                         ClientId = c.Int(nullable: false),
                         ReservationId = c.Int(nullable: false),
-                        AmountDue = c.Double(nullable: false),
+                        AmountDue = c.Single(nullable: false),
                         InvoicePaid = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.InvoiceId)
@@ -102,7 +102,8 @@ namespace ThePhotoShop5.Migrations
                         ReservationId = c.Int(nullable: false, identity: true),
                         ClientId = c.Int(nullable: false),
                         LocationId = c.Int(nullable: false),
-                        AppointmentDateTime = c.String(),
+                        AppointmentDate = c.DateTime(nullable: false),
+                        AppointmentTime = c.String(),
                         AppointmentConfirmation = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.ReservationId)

@@ -22,44 +22,50 @@
 
             @Html.DropDownList("ClientId", null, htmlAttributes: new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.ClientId, "", new { @class = "text-danger" })
-
         </div>
     </div>
-    
+    @*<div class="form-group">
+            @Html.HiddenFor(model => model.ClientId)
+
+
+        </div>*@
+
+
     <div class="form-group">
         @Html.LabelFor(model => model.LocationId, "Custom Location", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.ActionLink("New", "Create", "Locations", new { area = "" }, new { @class = "btn btn-default" })
+            @Html.ActionLink("New", "Create", "Locations", new { area = "" }, new { @class = "btn btn-primary btn-md" })
         </div>
-        </div>
-        
+    </div>
+
     <div class="form-group">
-            @Html.LabelFor(model => model.LocationId, "Popular Locations", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+        @Html.LabelFor(model => model.LocationId, "Popular Locations", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
 
 
-                @Html.DropDownList("LocationId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.LocationId, "", new { @class = "text-danger" })
-            </div>
+            @Html.DropDownList("LocationId", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.LocationId, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.AppointmentDate, "Appointment Date", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.AppointmentDate, new { htmlAttributes = new { @class = "datepicker" } })
-                @Html.ValidationMessageFor(model => model.AppointmentDate, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.AppointmentDate, "Appointment Date", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.AppointmentDate, new { htmlAttributes = new { @class = "datepicker" } })
+            @Html.ValidationMessageFor(model => model.AppointmentDate, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.AppointmentTime, "Appointment Time", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.AppointmentTime, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AppointmentTime, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.AppointmentTime, "Appointment Time", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.AppointmentTime, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.AppointmentTime, "", new { @class = "text-danger" })
         </div>
+    </div>
 
-        <div class="form-group">
+    @if (User.IsInRole("Owner"))
+    {<div class="form-group">
             @Html.LabelFor(model => model.AppointmentConfirmation, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
@@ -68,13 +74,14 @@
                 </div>
             </div>
         </div>
+    }
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Submit Reservation" class="btn btn-primary btn-md" />
         </div>
     </div>
+</div>
 }
     <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
 <div>
@@ -89,11 +96,13 @@
         $(function () {
             $(".datepicker").datepicker({
                 //dateFormat: "mm/dd/yyyy",
+                
                 changeMonth: true,
                 changeYear: true,
                 showOn: "both",
                 buttonText: "Select",
-
+                minDate: new Date(2018,4,1),
+                
             });
         });
     </script>

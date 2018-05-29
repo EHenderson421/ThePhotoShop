@@ -1,4 +1,5 @@
-﻿using Stripe;
+﻿using Microsoft.AspNet.Identity;
+using Stripe;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -86,6 +87,7 @@ namespace ThePhotoShop5.Controllers
         {
             if (ModelState.IsValid)
             {
+                //client.UserId = User.Identity.GetUserId();
                 db.Clients.Add(client);
                 
                 db.SaveChanges();

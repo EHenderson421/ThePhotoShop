@@ -8,14 +8,14 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Email</title>
 </head>
 <body>
     <div>
         @using (Html.BeginForm("Index", "Emails", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
-            <center>
-                <h1>S/H Photography Email</h1>
+            @*<center>*@
+                <h2>Email S/H Photography.</h2>
                 <hr />
                 <table>
                     <tr>
@@ -44,13 +44,17 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="submit" value="Send" />
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" class="btn btn-primary btn-md" value="Send" />
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 </table>
                 <br />
                 <span style="color:green">@ViewBag.Message</span>
-            </center>
+            @*</center>*@
         }
     </div>
 </body>

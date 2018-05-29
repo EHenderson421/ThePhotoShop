@@ -7,7 +7,10 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @if (User.IsInRole("Owner"))
+    {
+        @Html.ActionLink("Create New", "Create")
+    }
 </p>
 <table class="table">
     <tr>
@@ -47,9 +50,19 @@
             @Html.DisplayFor(modelItem => item.InvoicePaid)
         </td>
         <td>
-            @*@Html.ActionLink("Edit", "Edit", new { id = item.InvoiceId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.InvoiceId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.InvoiceId })*@
+            @if (User.IsInRole("Owner"))
+            {
+                @Html.ActionLink("Edit ", "Edit", new { id = item.InvoiceId, @class = "nav-link" })
+                @Html.ActionLink("Details ", "Details", new { id = item.InvoiceId, @class = "nav-link" })
+                @Html.ActionLink("Delete ", "Delete", new { id = item.InvoiceId, @class = "nav-link" })
+            }
+
+        </td>
+        <td>
+            @if (User.IsInRole("Client"))
+            {
+                @Html.ActionLink("Make Deposit", "PaymentMade", "Clients", new { area = "" }, new { @class = "btn btn-primary btn-md" })
+            }
         </td>
     </tr>
 }

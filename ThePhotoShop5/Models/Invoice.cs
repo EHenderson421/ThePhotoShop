@@ -22,7 +22,7 @@ namespace ThePhotoShop5.Models
 
         [Display(Name = "Amount Due")]
         public float AmountDue { get; set; }
-        [Display(Name = "Paid In Full")]
+        [Display(Name = "Deposit Paid")]
         public bool InvoicePaid { get; set; }
     }
 }

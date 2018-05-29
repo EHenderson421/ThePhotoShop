@@ -3,25 +3,25 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class=>Guest Home</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+
+    <h1>Photographer For Hire.</h1>
+    <h2>Services Provided:</h2>
+    <h3>In-Studio Shoot: $100 (Please set aside 2 hours for In-Studio shoot). </h3>
+    <h3>On-Location Shoot: $150 (Please set aside 3 hours for On-Location Shoot).</h3>
+    <h4>$50 Deposit will be required once reservation is approved.</h4>
+
 </div>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <h2>Suggested Locations</h2>
 
-        @Html.ActionLink("View", "Index", "Locations", new { area = "" }, new { @class = "btn btn-default" })
+        @Html.ActionLink("View", "Index", "Locations", new { area = "" }, new { @class = "btn btn-primary btn-md" })
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="col-md-6">
+        <h2>Contact S/H Photography</h2>
+
+        @Html.ActionLink("Email", "Index", "Emails", new { area = "" }, new { @class = "btn btn-primary btn-md" })
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    
 </div>

@@ -5,32 +5,34 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">Client Home</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Photographer For Hire.</h1>
+    <h2>Services Provided:</h2>
+    <h3>In-Studio Shoot: $100 (Please set aside 2 hours for In-Studio shoot). </h3>
+    <h3>On-Location Shoot: $150 (Please set aside 3 hours for On-Location Shoot).</h3>
+    <h4>$50 Deposit will be required once reservation is approved.</h4>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Request New Appointment</h2>
+        <h2>Request a Reservation</h2>
         <p>
             
         </p>
-        @Html.ActionLink("New", "Create", "Reservations", new { area = "" }, new { @class = "btn btn-default" })
+        @Html.ActionLink("New", "Create", "Reservations", new { area = "" }, new { @class = "btn btn-primary btn-md" })
     </div>
     <div class="col-md-4">
-        <h2>Review Your Appointments</h2>
+        <h2>Review Reservations</h2>
         <p>
 
         </p>
-        @Html.ActionLink("View", "Index", "Reservations", new { area = "" }, new { @class = "btn btn-default" })
+        @Html.ActionLink("View", "Index", "Reservations", new { area = "" }, new { @class = "btn btn-primary btn-md" })
     </div>
     <div class="col-md-4">
         <h2>Have a Question?</h2>
         <p>
 
         </p>
-        @Html.ActionLink("Email", "Index", "Emails", new { area = "" }, new { @class = "btn btn-default" })
+        @Html.ActionLink("Email", "Index", "Emails", new { area = "" }, new { @class = "btn btn-primary btn-md" })
     </div>
 </div>
 

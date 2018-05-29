@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -41,7 +42,16 @@ namespace ThePhotoShop5.Controllers
         {
             ViewBag.ClientId = new SelectList(db.Clients, "ClientId", "FirstName");
             ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "NameOfLocation");
-            return View();
+
+            string currentUserId = User.Identity.GetUserId();
+
+            Client currentClient = db.Clients.Where(c => c.User.Id == currentUserId).FirstOrDefault();
+
+            Reservation res = new Reservation();
+
+            //res.ClientId = currentClient.ClientId;
+
+            return View(res);
         }
 
         // POST: Reservations/Create

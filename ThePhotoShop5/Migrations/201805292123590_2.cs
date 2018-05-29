@@ -3,7 +3,7 @@ namespace ThePhotoShop5.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class _6 : DbMigration
+    public partial class _2 : DbMigration
     {
         public override void Up()
         {
