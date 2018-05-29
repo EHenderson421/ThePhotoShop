@@ -24,18 +24,20 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="@Url.Action("Index", "Home")"><img src="~/Content/Images/shp2.jpg" width="150" height="150" /></a>
-                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                @*<a href="@Url.Action("Instagram", "Instagram")"><img src="~/Content/Images/insta.jpg" width="150" height="100" /></a>*@
+    @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-               
+                @*<li>@Url.Action("instagram", "instagram"), routeValues: null, htmlAttributes: new { id = "instagram", @class = "nav-link" })</li>*@
                     @*<ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     Use this to create roles as needed //Eric Added
                     @*<li>@Html.ActionLink("Role", "Index", "Role")</li>*@
-                @*</ul>*@
+                </ul>
+
                 @Html.Partial("_LoginPartial")
             </div>
         </div>

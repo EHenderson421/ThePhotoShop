@@ -203,6 +203,7 @@
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\EmailsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstagramController.cs" />
     <Compile Include="Controllers\InvoicesController.cs" />
     <Compile Include="Controllers\LocationsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -386,6 +387,7 @@
     <Content Include="Content\Images\DSC_0532-2.jpg" />
     <Content Include="Content\Images\DSC_0532-3.jpg" />
     <Content Include="Content\Images\DSC_0547-2.jpg" />
+    <Content Include="Content\Images\insta.jpg" />
     <Content Include="Content\Images\logo.jpg" />
     <Content Include="Content\Images\shp.jpg" />
     <Content Include="Content\Images\shp2.jpg" />
@@ -535,6 +537,7 @@
     <Content Include="Views\Invoices\Index.cshtml" />
     <Content Include="Views\Clients\Charge.cshtml" />
     <Content Include="Views\Clients\PaymentMade.cshtml" />
+    <Content Include="Views\Instagram\Instagram.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
