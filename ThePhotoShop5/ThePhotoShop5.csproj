@@ -388,6 +388,7 @@
     <Content Include="Content\Images\DSC_0532-3.jpg" />
     <Content Include="Content\Images\DSC_0547-2.jpg" />
     <Content Include="Content\Images\insta.jpg" />
+    <Content Include="Content\Images\insta2.jpg" />
     <Content Include="Content\Images\logo.jpg" />
     <Content Include="Content\Images\shp.jpg" />
     <Content Include="Content\Images\shp2.jpg" />
@@ -538,6 +539,8 @@
     <Content Include="Views\Clients\Charge.cshtml" />
     <Content Include="Views\Clients\PaymentMade.cshtml" />
     <Content Include="Views\Instagram\Instagram.cshtml" />
+    <Content Include="Views\Owners\History.cshtml" />
+    <Content Include="Views\Owners\Canceled.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

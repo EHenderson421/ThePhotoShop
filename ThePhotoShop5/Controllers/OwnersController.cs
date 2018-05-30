@@ -15,6 +15,15 @@ namespace ThePhotoShop5.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        public ActionResult Canceled()
+        {
+            return View();
+        }
+
+        public ActionResult History()
+        {
+            return View();
+        }
         public ActionResult Home()
         {
             return View();

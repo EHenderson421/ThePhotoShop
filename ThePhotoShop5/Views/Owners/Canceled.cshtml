@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ThePhotoShop5.Models.Reservation>
+@{
+    ViewBag.Title = "History";
+}
+
+<h2>Canceled Appointments</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location.NameOfLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppointmentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppointmentTime)
+        </th>
+
+    </tr>
+
+    <tr>
+        <td>
+            <p>Beth</p>
+        </td>
+        <td>
+            <p>Boparland</p>
+        </td>
+        <td>
+            <p>Grant Park</p>
+        </td>
+        <td>
+            <p>04/21/2018</p>
+        </td>
+        <td>
+            <p>12:00pm</p>
+        </td>
+
+        <td>
+            @Html.ActionLink("Email", "Index", "Emails", new { area = "" }, new { @class = "btn btn-primary btn-md" })
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <p>Casey</p>
+        </td>
+        <td>
+            <p>Smith</p>
+        </td>
+        <td>
+            <p>Marx Park</p>
+        </td>
+        <td>
+            <p>05/05/2018</p>
+        </td>
+        <td>
+            <p>2:00pm</p>
+        </td>
+
+        <td>
+            @Html.ActionLink("Email", "Index", "Emails", new { area = "" }, new { @class = "btn btn-primary btn-md" })
+
+        </td>
+    </tr>
+</table>

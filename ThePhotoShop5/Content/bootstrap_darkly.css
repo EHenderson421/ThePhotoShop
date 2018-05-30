@@ -76,6 +76,9 @@ body {
   color: #fff;
   text-align: left;
   background-color: #222;
+  background-image: url(Images/DSC_0416-4.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 [tabindex="-1"]:focus {

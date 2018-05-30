@@ -13,6 +13,7 @@ namespace ThePhotoShop5.Controllers
         
         public ActionResult Index()
         {
+            ViewBag.BackgroundImage = "~/Content/Images/shp2.jpg";
             return View();
         }
 
