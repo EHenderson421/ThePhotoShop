@@ -3,7 +3,7 @@
     ViewBag.Title = "History";
 }
 
-<h2>Year Over Year History</h2>
+<h2>Sales History</h2>
 
 <table class="table">
     <tr>
@@ -46,7 +46,9 @@
         <th>
             <p>Dec</p>
         </th>
-
+        <th>
+            <p>Break Down</p>
+        </th>
     </tr>
 
     <tr>
@@ -89,8 +91,11 @@
         <td>
             <p>*</p>
         </td>
+        <td>
+            @Html.ActionLink("View Info", "HistoryChart2018", "Owners")
+        </td>
     </tr>
-
+    
     <tr>
         <td>
             <p>2017</p>
@@ -131,6 +136,9 @@
         <td>
             <p>8</p>
         </td>
+        <td>
+            @Html.ActionLink("View Info", "HistoryChart2017", "Owners")
+        </td>
     </tr>
 
     <tr>
@@ -138,7 +146,7 @@
             <p>2016</p>
         </td>
         <td>
-            <p>5</p>
+            <p>4</p>
         </td>
         <td>
             <p>9</p>
@@ -172,6 +180,103 @@
         </td>
         <td>
             <p>5</p>
+        </td>
+        <td>
+            @Html.ActionLink("View Info", "HistoryChart2016", "Owners")
+        </td>
+    </tr>
+
+</table>
+
+<h2>Year Over Year Average</h2>
+<table class="table">
+    <tr>
+        <th>
+            <p>Year</p>
+        </th>
+        <th>
+            <p>Jan</p>
+        </th>
+        <th>
+            <p>Feb</p>
+        </th>
+        <th>
+            <p>Mar</p>
+        </th>
+        <th>
+            <p>Apr</p>
+        </th>
+        <th>
+            <p>May</p>
+        </th>
+        <th>
+            <p>Jun</p>
+        </th>
+        <th>
+            <p>Jul</p>
+        </th>
+        <th>
+            <p>Aug</p>
+        </th>
+        <th>
+            <p>Sep</p>
+        </th>
+        <th>
+            <p>Oct</p>
+        </th>
+        <th>
+            <p>Nov</p>
+        </th>
+        <th>
+            <p>Dec</p>
+        </th>
+        <th>
+            <p>Break Down</p>
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+            <p>Average</p>
+        </td>
+        <td>
+            <p>13</p>
+        </td>
+        <td>
+            <p>17</p>
+        </td>
+        <td>
+            <p>26</p>
+        </td>
+        <td>
+            <p>34</p>
+        </td>
+        <td>
+            <p>42</p>
+        </td>
+        <td>
+            <p>35</p>
+        </td>
+        <td>
+            <p>16</p>
+        </td>
+        <td>
+            <p>12</p>
+        </td>
+        <td>
+            <p>13</p>
+        </td>
+        <td>
+            <p>19</p>
+        </td>
+        <td>
+            <p>23</p>
+        </td>
+        <td>
+            <p>7</p>
+        </td>
+        <td>
+            @Html.ActionLink("View Info", "HistoryAverage", "Owners")
         </td>
     </tr>
 

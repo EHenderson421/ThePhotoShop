@@ -1,0 +1,18 @@
+﻿@model ThePhotoShop5.Models.Reservation
+
+@{
+    ViewBag.Title = "HistoryChart2016";
+}
+
+<h2>HistoryChart</h2>
+
+@{
+    var myChart = new Chart(width: 1000, height: 400)
+        .AddTitle("2017 Total:199  Best Month:April_Total:31  Worst Month:January_Total:4 ")
+        .AddSeries(
+            name: "History",
+            xValue: new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", },
+            yValues: new[] { "4", "9", "21", "31", "30", "27", "11", "8", "11", "18", "23", "5" })
+        .Write();
+
+}

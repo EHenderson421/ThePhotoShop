@@ -20,6 +20,22 @@ namespace ThePhotoShop5.Controllers
             return View();
         }
 
+        public ActionResult HistoryChart2018()
+        {
+            return View();
+        }
+        public ActionResult HistoryChart2017()
+        {
+            return View();
+        }
+        public ActionResult HistoryChart2016()
+        {
+            return View();
+        }
+        public ActionResult HistoryAverage()
+        {
+            return View();
+        }
         public ActionResult History()
         {
             return View();

@@ -539,6 +539,10 @@
     <Content Include="Views\Owners\History.cshtml" />
     <Content Include="Views\Owners\Canceled.cshtml" />
     <Content Include="Views\Proofs\Index.cshtml" />
+    <Content Include="Views\Owners\HistoryChart2018.cshtml" />
+    <Content Include="Views\Owners\HistoryChart2017.cshtml" />
+    <Content Include="Views\Owners\HistoryChart2016.cshtml" />
+    <Content Include="Views\Owners\HistoryAverage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
