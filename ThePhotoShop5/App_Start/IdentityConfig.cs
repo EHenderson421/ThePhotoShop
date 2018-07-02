@@ -87,8 +87,7 @@ namespace ThePhotoShop5
             return manager;
         }
     }    
-        
-
+     
     // Configure the application sign-in manager which is used in this application.
     public class ApplicationSignInManager : SignInManager<ApplicationUser, string>
     {

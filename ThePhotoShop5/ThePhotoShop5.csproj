@@ -208,18 +208,15 @@
     <Compile Include="Controllers\LocationsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OwnersController.cs" />
+    <Compile Include="Controllers\ProofsController.cs" />
     <Compile Include="Controllers\ReservationsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201805291923186_1.cs" />
-    <Compile Include="Migrations\201805291923186_1.Designer.cs">
-      <DependentUpon>201805291923186_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805292123590_2.cs" />
-    <Compile Include="Migrations\201805292123590_2.Designer.cs">
-      <DependentUpon>201805292123590_2.cs</DependentUpon>
+    <Compile Include="Migrations\201805301315211_first.cs" />
+    <Compile Include="Migrations\201805301315211_first.Designer.cs">
+      <DependentUpon>201805301315211_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -541,6 +538,7 @@
     <Content Include="Views\Instagram\Instagram.cshtml" />
     <Content Include="Views\Owners\History.cshtml" />
     <Content Include="Views\Owners\Canceled.cshtml" />
+    <Content Include="Views\Proofs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -559,11 +557,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805291923186_1.resx">
-      <DependentUpon>201805291923186_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805292123590_2.resx">
-      <DependentUpon>201805292123590_2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201805301315211_first.resx">
+      <DependentUpon>201805301315211_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
