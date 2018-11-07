@@ -31,7 +31,7 @@ namespace ThePhotoShop5.Controllers
             smtp.Port = 587;
             smtp.EnableSsl = true;
 
-            NetworkCredential nc = new NetworkCredential("");
+            NetworkCredential nc = new NetworkCredential("TheBetterScheduler@gmail.com", "Password123$");
             smtp.UseDefaultCredentials = true;
             smtp.Credentials = nc;
             smtp.Send(mm);
